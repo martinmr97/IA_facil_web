@@ -4,6 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>IA Fácil - Aprende y Automatiza con Inteligencia Artificial</title>
+
   <meta name="description" content="Aprende a usar inteligencia artificial para automatizar tareas y crear contenido. Cursos, herramientas y recursos fáciles para emprendedores y creadores." />
   <link rel="stylesheet" href="styles.css" />
 </head>
@@ -25,7 +26,10 @@
     <article>
       <h3>Introducción a la Inteligencia Artificial</h3>
       <p>Curso básico para principiantes donde aprenderás los conceptos clave de la IA y sus aplicaciones.</p>
-      <a href="#">Ver más</a>
+      <button onclick="toggleInfo()">Ver más</button>
+      <p id="infoIA" style="display:none; margin-top:10px;">
+        La inteligencia artificial (IA) es una rama de la informática que crea sistemas capaces de realizar tareas que normalmente requieren inteligencia humana, como reconocer voz, tomar decisiones o aprender de datos. En este curso, te explicaremos estos conceptos de manera sencilla para que puedas comenzar a entender y usar la IA en tu vida o negocio.
+      </p>
     </article>
     <article>
       <h3>Automatización de tareas con IA</h3>
@@ -62,5 +66,16 @@
   <footer>
     <p>© 2025 IA Fácil. Todos los derechos reservados.</p>
   </footer>
+
+  <script>
+    function toggleInfo() {
+      const info = document.getElementById('infoIA');
+      if (info.style.display === 'none') {
+        info.style.display = 'block';
+      } else {
+        info.style.display = 'none';
+      }
+    }
+  </script>
 </body>
 </html>
