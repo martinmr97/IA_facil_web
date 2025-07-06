@@ -178,15 +178,47 @@ footer {
   border-radius: 8px;
   box-shadow: 0 0 8px #3bc9db44;
 }
-/* button {
-      background-color: #0066cc;
-      color: white;
-      border: none;
-      padding: 8px 15px;
-      cursor: pointer;
-      border-radius: 4px;
-      font-size: 14px;
-    }
-button:hover {
-  background-color: #004999;
-} */
+/* Laterales para anuncios o imágenes */
+.lateral {
+  position: fixed;
+  top: 0;
+  width: 120px;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 100;
+  background: transparent;
+}
+
+.lateral.izquierdo {
+  left: 0;
+}
+
+.lateral.derecho {
+  right: 0;
+}
+
+.lateral img {
+  max-width: auto;
+  /* max-height: 90vh; */
+  border-radius: 10px;
+  box-shadow: 0 0 10px #3bc9db55;
+}
+
+/* Ajusta el contenido principal para dejar espacio a los laterales */
+.contenido-principal {
+  margin-left: 140px;
+  margin-right: 140px;
+}
+
+/* Responsive: Oculta laterales en pantallas pequeñas */
+@media (max-width: 1100px) {
+  .lateral, .lateral img {
+    display: none;
+  }
+  .contenido-principal {
+    margin-left: 0;
+    margin-right: 0;
+  }
+}
