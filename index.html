@@ -1,62 +1,17 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>IA Fácil - Aprende y Automatiza con Inteligencia Artificial</title>
-  <meta name="description" content="Aprende a usar inteligencia artificial para automatizar tareas y crear contenido. Cursos, herramientas y recursos fáciles para emprendedores y creadores." />
+  <meta name="description"
+    content="Aprende a usar inteligencia artificial para automatizar tareas y crear contenido. Cursos, herramientas y recursos fáciles para emprendedores y creadores." />
   <link rel="stylesheet" href="styles.css" />
-  <style>
-    /* Espacios entre textos para mejor lectura */
-    body {
-      font-family: Arial, sans-serif;
-      line-height: 1.6;
-      margin: 20px;
-      background: #f9f9f9;
-      color: #333;
-    }
-    header, section, footer {
-      margin-bottom: 30px;
-    }
-    h1, h2, h3 {
-      margin-bottom: 10px;
-      color: #222;
-    }
-    p {
-      margin-bottom: 15px;
-    }
-    nav ul {
-      list-style: none;
-      padding: 0;
-      display: flex;
-      gap: 15px;
-    }
-    nav ul li a {
-      text-decoration: none;
-      color: #0066cc;
-    }
-    nav ul li a:hover {
-      text-decoration: underline;
-    }
-    
-    form label {
-      display: block;
-      margin-bottom: 5px;
-      font-weight: bold;
-    }
-    form input, form textarea {
-      width: 100%;
-      padding: 8px;
-      margin-bottom: 15px;
-      border: 1px solid #ccc;
-      border-radius: 4px;
-      font-size: 14px;
-    }
-    form button {
-      width: auto;
-    }
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500&display=swap" rel="stylesheet" />
   </style>
 </head>
+
 <body>
   <header>
     <h1>IA Fácil</h1>
@@ -75,15 +30,25 @@
     <article>
       <h3>Introducción a la Inteligencia Artificial</h3>
       <p>Curso básico para principiantes donde aprenderás los conceptos clave de la IA y sus aplicaciones.</p>
-      <button onclick="toggleInfo()">Ver más</button>
-      <p id="infoIA" style="display:none; margin-top:10px;">
-        La inteligencia artificial (IA) es una rama de la informática que crea sistemas capaces de realizar tareas que normalmente requieren inteligencia humana, como reconocer voz, tomar decisiones o aprender de datos. En este curso, te explicaremos estos conceptos de manera sencilla para que puedas comenzar a entender y usar la IA en tu vida o negocio.
+      <button onclick="toggleInfo('info1')">Ver más</button>
+      <p id="infoIA1" style="display:none; margin-top:10px;">
+        La inteligencia artificial (IA) es una rama de la informática que crea sistemas capaces de realizar tareas que
+        normalmente requieren inteligencia humana, como reconocer voz, tomar decisiones o aprender de datos. En este
+        curso, te explicaremos estos conceptos de manera sencilla para que puedas comenzar a entender y usar la IA en tu
+        vida o negocio.
       </p>
     </article>
     <article>
       <h3>Automatización de tareas con IA</h3>
       <p>Aprende a usar herramientas que te permitirán automatizar procesos y ahorrar tiempo.</p>
-      <a href="#">Ver más</a>
+      <button onclick="toggleInfo('infd2')">Ver más</button>
+      <p id="infoIA2" style="display:none; margin-top:10px;">
+        Aprende cómo usar herramientas basadas en inteligencia artificial para automatizar tareas repetitivas como
+        responder correos, gestionar redes sociales, organizar archivos, generar contenido y más. Este curso te enseña a
+        ahorrar tiempo y aumentar tu productividad sin necesidad de programar, utilizando plataformas como Zapier,
+        ChatGPT y otras herramientas
+
+      </p>
     </article>
   </section>
 
@@ -108,7 +73,7 @@
       <label for="mensaje">Mensaje:</label>
       <textarea id="mensaje" name="mensaje" placeholder="Escribe tu mensaje aquí" required></textarea>
 
-      <button type="submit">Enviar</button>
+      <button type="submit" onclick="sendMail()">Enviar</button>
     </form>
   </section>
 
@@ -117,14 +82,24 @@
   </footer>
 
   <script>
-    function toggleInfo() {
-      const info = document.getElementById('infoIA');
+    function toggleInfo(variable) {
+      let info
+      if (variable == 'info1') {
+        info = document.getElementById('infoIA1')
+      }
+      if (variable == 'infd2') {
+        info = document.getElementById('infoIA2')
+      }
       if (info.style.display === 'none') {
         info.style.display = 'block';
       } else {
         info.style.display = 'none';
       }
     }
+    function sendMail(){
+      
+    }
   </script>
 </body>
+
 </html>
